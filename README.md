@@ -47,3 +47,8 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+### output :
+![image](https://github.com/user-attachments/assets/c1b35a84-06e1-44ff-8b33-16a573ddb41a)
+
+

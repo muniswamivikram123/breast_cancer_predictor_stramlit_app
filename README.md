@@ -1,3 +1,8 @@
+##### This project was built following a YouTube tutorial to learn and implement a machine learning model for breast cancer prediction.
+
+Alejandro AO - Software & Ai
+
+
 # breast_cancer_predictor_stramlit_app
 
 ### step1:

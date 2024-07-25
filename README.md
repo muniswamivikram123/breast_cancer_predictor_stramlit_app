@@ -27,3 +27,23 @@ if __name__ == '__main__':
 
 
 ### step2:
+
+```python
+import streamlit as st
+import pickle5 as pickle
+import pandas as pd
+def main():
+    st.set_page_config(
+        page_title = "breast cancer predictor",
+        page_icon = ":female-doctor:",
+        layout = "wide",
+        initial_sidebar_state = "expanded"
+    )
+    with st.container():
+        st.title("Breast canser predictor")
+        st.write("write anything like a paragraph")
+    
+
+if __name__ == '__main__':
+    main()
+```

@@ -25,7 +25,6 @@ if __name__ == '__main__':
 ![image](https://github.com/user-attachments/assets/129e680a-61c0-49a6-9b6a-f61981155dc4)
 
 
-
 ### step2:
 
 ```python
@@ -83,6 +82,108 @@ if __name__ == '__main__':
 
 #### output :
 ![image](https://github.com/user-attachments/assets/34f8225e-95b9-4fdc-8458-829caf4d8208)
+
+### step4:
+#### adding sidebar
+
+```python
+import streamlit as st
+import pickle5 as pickle
+import pandas as pd
+
+def get_clean_data():
+    data = pd.read_csv("data\data.csv")
+    #print(data.head())
+    # droping the Unnamed and id because unnamed have Nan value and id is not required
+    data = data.drop(['Unnamed: 32','id'], axis=1)
+    # now we have to encode the data of diagnosis
+    data['diagnosis'] = data['diagnosis'].map({'M':1,'B':0})
+    #print(data)
+    #print(data)
+    return data
+
+def add_sidebar():
+    st.sidebar.header("Cell Nuclei Measurements")
+
+    data = get_clean_data()
+
+    slider_labels = [
+        ("Radius (mean)", "radius_mean"),
+        ("Texture (mean)", "texture_mean"),
+        ("Perimeter (mean)", "perimeter_mean"),
+        ("Area (mean)", "area_mean"),
+        ("Smoothness (mean)", "smoothness_mean"),
+        ("Compactness (mean)", "compactness_mean"),
+        ("Concavity (mean)", "concavity_mean"),
+        ("Concave points (mean)", "concave points_mean"),
+        ("Symmetry (mean)", "symmetry_mean"),
+        ("Fractal dimension (mean)", "fractal_dimension_mean"),
+        ("Radius (se)", "radius_se"),
+        ("Texture (se)", "texture_se"),
+        ("Perimeter (se)", "perimeter_se"),
+        ("Area (se)", "area_se"),
+        ("Smoothness (se)", "smoothness_se"),
+        ("Compactness (se)", "compactness_se"),
+        ("Concavity (se)", "concavity_se"),
+        ("Concave points (se)", "concave points_se"),
+        ("Symmetry (se)", "symmetry_se"),
+        ("Fractal dimension (se)", "fractal_dimension_se"),
+        ("Radius (worst)", "radius_worst"),
+        ("Texture (worst)", "texture_worst"),
+        ("Perimeter (worst)", "perimeter_worst"),
+        ("Area (worst)", "area_worst"),
+        ("Smoothness (worst)", "smoothness_worst"),
+        ("Compactness (worst)", "compactness_worst"),
+        ("Concavity (worst)", "concavity_worst"),
+        ("Concave points (worst)", "concave points_worst"),
+        ("Symmetry (worst)", "symmetry_worst"),
+        ("Fractal dimension (worst)", "fractal_dimension_worst"),
+    ]
+
+    input_dict = {}
+
+
+
+
+    for label,key in slider_labels:
+        st.sidebar.slider(
+            label,
+            min_value =0,
+            max_value = 100
+        )
+
+
+     
+
+def main():
+    st.set_page_config(
+        page_title = "breast cancer predictor",
+        page_icon = ":female-doctor:",
+        layout = "wide",
+        initial_sidebar_state = "expanded"
+    )
+
+    add_sidebar()
+    with st.container():
+        st.title("Breast cancer predictor")
+        st.write("write anything like a paragraph")
+
+    col1,col2 = st.columns([4,1])
+    with col1:
+        st.write("this is column 1")
+    
+    with col2:
+        st.write("this is column 2")
+    
+
+if __name__ == '__main__':
+    main()
+
+```
+
+output:
+![image](https://github.com/user-attachments/assets/0033efa9-5219-4bd5-a265-0a1b25919921)
+
 
 
 

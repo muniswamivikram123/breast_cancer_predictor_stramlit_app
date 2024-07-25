@@ -6,7 +6,8 @@
 
 #### import the required libraries and try it 
 
-> import streamlit as st
+'''
+import streamlit as st
 import pickle5 as pickle
 import pandas as pd
 def main():

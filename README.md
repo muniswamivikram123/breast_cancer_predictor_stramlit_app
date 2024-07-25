@@ -189,6 +189,22 @@ if __name__ == '__main__':
 output:
 ![image](https://github.com/user-attachments/assets/0033efa9-5219-4bd5-a265-0a1b25919921)
 
+### step4:
+
+#### maximum value
+##### instead of keeping 100 as a maximum keep actual value in the dataset 
+```python
+for label,key in slider_labels:
+        st.sidebar.slider(
+            label,
+            min_value =float(0),
+            max_value =float(data[key].max())
+        )
+```
+
+#### output :
+![image](https://github.com/user-attachments/assets/0cdd4860-d16f-4f55-94e6-bbd72b638cfb)
+
 
 
 

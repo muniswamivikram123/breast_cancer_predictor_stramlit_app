@@ -205,6 +205,21 @@ for label,key in slider_labels:
 #### output :
 ![image](https://github.com/user-attachments/assets/0cdd4860-d16f-4f55-94e6-bbd72b638cfb)
 
+### for average
+
+```python
+for label,key in slider_labels:
+        st.sidebar.slider(
+            label,
+            min_value =float(0),
+            max_value =float(data[key].max()),
+            value =float(data[key].mean())
+        )
+```
+
+### output:
+![image](https://github.com/user-attachments/assets/78f20beb-b4c1-4a93-aefb-8cc404c8db76)
+
 
 
 

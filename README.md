@@ -18,4 +18,9 @@ def main():
     )
     st.write("hello world!")
 
+if __name__ == '__main__':
+    main()
+```
 #### output for this:
+![image](https://github.com/user-attachments/assets/129e680a-61c0-49a6-9b6a-f61981155dc4)
+

@@ -24,3 +24,6 @@ if __name__ == '__main__':
 #### output for this:
 ![image](https://github.com/user-attachments/assets/129e680a-61c0-49a6-9b6a-f61981155dc4)
 
+
+
+### step2:

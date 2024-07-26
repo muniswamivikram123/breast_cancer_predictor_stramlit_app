@@ -390,6 +390,8 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+##### output without any styles and charts:
+![image](https://github.com/user-attachments/assets/0ac38bc1-f383-49ec-8c0f-4181d145732f)
 
 
 
